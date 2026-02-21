@@ -8,15 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Cache dependencies
-        id: cache-step
+        id: cache7273dae
         uses: actions/cache@v4
         with:
           path: ~/.cache/demo
           key: cache-7273dae
 
       - name: prime-cache-7273dae
-        run: echo "Cache hit? ${{ steps.cache-step.outputs.cache-hit }}"
+        run: echo "Cache hit? ${{ steps.cache7273dae.outputs.cache-hit }}"
